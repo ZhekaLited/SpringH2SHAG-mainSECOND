@@ -1,9 +1,9 @@
- insert into PUBLIC.Car ( car_Name , car_Color, car_Model) values ('BMW','BLACK','E34');
- insert into Car ( car_Name , car_Color, car_Model) values ('MERCEDES','WHITE','W140');
- insert into Car ( car_Name , car_Color, car_Model) values ('LADA','BLACK','PRIORA');
- insert into Car ( car_Name , car_Color, car_Model) values ('GEELY','GREEN','453');
- insert into Car ( car_Name , car_Color, car_Model) values ('TOYOTA','BLACK','3.5');
- insert into Car ( car_Name , car_Color, car_Model) values ('AUDI','RED','100');
+ insert into PUBLIC.Car (car_Name,car_Color,car_Model) values ('BMW','BLACK','E34');
+ insert into Car (car_Name,car_Color,car_Model) values ('MERCEDES','WHITE','W140');
+ insert into Car (car_Name,car_Color,car_Model) values ('LADA','BLACK','PRIORA');
+ insert into Car (car_Name,car_Color,car_Model) values ('GEELY','GREEN','453');
+ insert into Car (car_Name,car_Color,car_Model) values ('TOYOTA','BLACK','3.5');
+ insert into Car (car_Name,car_Color,car_Model) values ('AUDI','RED','100');
 
 
  insert into PUBLIC.Country (car_Id,country_Name,city_Name) values (1,'GERMANY','Toluca de Lerdo');
