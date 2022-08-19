@@ -9,7 +9,6 @@ import java.util.List;
 public   interface CarService {
 
     // Save operation
-
     Car save(Car car);
 
     // Read operation
