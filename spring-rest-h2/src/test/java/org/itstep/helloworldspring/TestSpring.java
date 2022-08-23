@@ -28,10 +28,30 @@ public class TestSpring {
     private MockMvc mvc;
 
     @Test
+    @Oreder(1)
     public void getCars() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/cars")
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
 
     }
+     @Test
+    @Order(2)
+    public void postCars() throws Exception {
+        mvc.perform(
+
+                        MockMvcRequestBuilders.post
+
+                                        ("/cars")
+                                .content(asJsonString(new Car(1L,"ad","adw","awd")))
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
+    }
+    public static String asJsonString(final Object obj) {
+        try {
+            return new ObjectMapper().writeValueAsString(obj);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 }
