@@ -67,4 +67,11 @@ public class TestSpring {
                 .andExpect(jsonPath("$", notNullValue()))
                 .andExpect(status().isOk());
     }
+        
+            @Test
+    @Order(4)
+    public void deleteCars() throws Exception {
+        mvc.perform(MockMvcRequestBuilders.delete("/cars/2"))
+                .andExpect(status().isOk());
+    }
 }
