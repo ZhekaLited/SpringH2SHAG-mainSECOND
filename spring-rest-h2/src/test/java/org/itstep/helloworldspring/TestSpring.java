@@ -43,7 +43,7 @@ public class TestSpring {
                         MockMvcRequestBuilders.post
 
                                         ("/cars")
-                                .content(asJsonString(new Car(1L,"ad","adw","awd")))
+                                .content(asJsonString(new Car(1L,"Mazda","White","e856")))
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
@@ -54,4 +54,17 @@ public class TestSpring {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+        
+          @Test
+    @Order(3)
+    public void putCars() throws Exception {
+        mvc.perform(
+                        MockMvcRequestBuilders.put
+                                        ("/cars/2")
+                                .content(asJsonString(new Car(4L, "Tiguan", "Black", "e29")))
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$", notNullValue()))
+                .andExpect(status().isOk());
+    }
 }
